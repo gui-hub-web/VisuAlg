@@ -1,0 +1,72 @@
+algoritmo "Tentando Fazer Uma Calculadora"
+
+// Função :Calculadora
+// Autor : lilGui
+// Data : 19/02/2020
+// Seção de Declarações
+var
+
+O:Caractere
+//O de operação, que o usuario vai selecionar
+R,A,N,V:real
+//R de repetiçao, o quanto de repetiçao em relação a quantidades de numeros que seram digitados.
+//A de acumulação de dados, é acumulçao dos dados antriores.
+//N de numero de repetições que seram feitas
+//V de valor do numero que o usuario deseja usar.
+
+inicio
+
+      escreval("   §§§§§§§§§§§§§§§§§§§§§§§§§§§  ")
+      escreval("   PROJETO CALCULADORA LIL_GUI  ")
+      escreval("   §§§§§§§§§§§§§§§§§§§§§§§§§§§  ")
+      escreva("Qual operação matematica deseja realizar(+, -, *): ")
+      leia(O)
+      se (O = "+" )entao
+         escreva ("Quantos numeros quer somar: ")
+         leia (R)
+      senao
+         se (O = "-") entao
+            escreva("Quantos numeros quer subtrair: ")
+            leia (R)
+         senao
+            se (O = "*") entao
+               escreva("Quantos numeros quer multiplicar: ")
+               leia (R)
+            fimse
+         fimse
+      fimse
+
+      N<-0
+      A<-0
+
+      se (O = "+" )entao
+         Enquanto (N < R) faca
+            N<-N+1
+            escreval("Valor do ",N,"° numero: ")
+            leia(V)
+            A<-V+A
+         fimenquanto
+         escreva ("O valor da soma é: ",A)
+      fimse
+
+      se (O = "-" )entao
+         Enquanto (N < R) faca
+            N<-N+1
+            escreval("Valor do ",N,"° numero: ")
+            leia(V)
+            A <- (V-A)
+         fimenquanto
+         escreva ("O valor da subtração é: ",A)
+      fimse
+
+      A<-1
+      se (O = "*" )entao
+         Enquanto (N < R) faca
+            N<-N+1
+            escreval("Valor do ",N,"° numero: ")
+            leia(V)
+            A <- (V*A)
+         fimenquanto
+         escreva ("O valor da multiplicação é: ",A)
+      fimse
+fimalgoritmo
